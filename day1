@@ -1,0 +1,13 @@
+1. Write a program to print hello world?
+#include<stdio.h>
+void main()
+{
+  printf("Hello World ;)");
+}
+
+2. Write a program to print your name?
+#include<stdio.h>
+void main()
+{
+  printf("Rohan Vijapur");
+}
