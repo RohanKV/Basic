@@ -1,114 +1,152 @@
 1.Write a program to get two integers from the user and print the sum of the two integers.
+
 #include<stdio.h>
+int input()
+{
+  int a;
+  printf(" \n Enter the number: ");
+  scanf("%d",&a);
+  return a;
+}
+
+int compute(int x, int y)
+{
+   int sum;
+   sum = x+y;
+   return sum;
+}
+
+int output(int sum)
+{
+    printf("\n The sum is: %d", sum);
+}
+
 void main()
 {
-  int a,b,sum;
-  printf("Enter the 1st number: ");
-  scanf("%d",&a);
-  printf("\n Enter the 2nd Number: ");
-  scanf("%d",&b);
-  sum = a+b;
-  printf("\n The sum is: %d", sum);
+  int a,b,result;
+  a = input();
+  b = input();
+  result = compute(a,b);
+  output(result);
 }
+
 ********************************************************************
 
 2. Write a function to add two integers.
-#include<stdio.h>
-int add(int, int);
-void main()
-{
-  int a,b,sum;
-  printf("Enter the 1st number: ");
-  scanf("%d",&a);
-  printf("\n Enter the 2nd Number: ");
-  scanf("%d \n",&b);
-  sum = add(a,b);
-  printf("\n The sum is: %d", sum);  
-}
-int add(int p, int q)
-{
-  int r;
-  r = p+q;
-  return r;
-}
 
+int compute(int x, int y)
+{
+   int sum;
+   sum = x+y;
+   return sum;
+}
 **********************************************************************
 3. Write a program to get two float from the user and print the sum of the two float?
 #include<stdio.h>
+float input()
+{
+  float a;
+  printf(" \n Enter the number: ");
+  scanf("%f",&a);
+  return a;
+}
+
+float compute(float x, float y)
+{
+   float sum;
+   sum = x+y;
+   return sum;
+}
+
+float output(float sum)
+{
+    printf("\n The sum is: %f", sum);
+}
+
 void main()
 {
-  float a,b,sum;
-  printf("Enter the 1st number: ");
-  scanf("%f ",&a);
-  printf("Enter the 2nd Number: ");
-  scanf("%f \n",&b);
-  sum = a+b;
-  printf("The sum is: %f", sum);
+  float a,b,result;
+  a = input();
+  b = input();
+  result = compute(a,b);
+  output(result);
 }
+
+
 ********************************************************************
 
 4. Write a function to add two float
-#include<stdio.h>
-float add(float, float);
-void main()
+
+float compute(float x, float y)
 {
-  float a,b,sum;
-  printf("Enter the 1st number: ");
-  scanf("%f",&a);
-  printf("\n Enter the 2nd Number: ");
-  scanf("%f",&b);
-  sum = add(a,b);
-  printf("\n The sum is: %f", sum);  
-}
-float add(float p, float q)
-{
-  float r;
-  r = p+q;
-  return r;
+   float sum;
+   sum = x+y;
+   return sum;
 }
 
 **********************************************************
 5. Write a function to compare 2 numbers and test it.
 #include<stdio.h>
-int comp(int, int);
-void main()
+int input()
 {
-  int a,b,result;
-  printf("Enter the 1st number: ");
+  int a;
+  printf(" \n Enter the number: ");
   scanf("%d",&a);
-  printf("\n Enter the 2nd Number: ");
-  scanf("%d \n",&b);
-  result = comp(a,b);
-  printf("\n The result is: %d", result);  
+  return a;
 }
-int comp(int x, int y)
+
+int compute(int x, int y)
 {
   int r;
   r = x>y ? x:y ;
   return r;
 }
 
+int output(int r)
+{
+    printf("\n The greater number is: %d", r);
+}
+
+void main()
+{
+  int a,b,result;
+  a = input();
+  b = input();
+  result = compute(a,b);
+  output(result);
+}
+
 *********************************************************
 6. Write a function to compare 3 numbers and test it.
 #include<stdio.h>
-int comp(int, int,int);
-void main()
+int input()
 {
-  int a,b,c,result;
-  printf("Enter the 1st number: ");
+  int a;
+  printf(" \n Enter the number: ");
   scanf("%d",&a);
-  printf("\n Enter the 2nd Number: ");
-  scanf("%d",&b);
-  printf("\n Enter the 3nd Number: ");
-  scanf("%d",&c);
-  result = comp(a,b,c);
-  printf("\n The result is: %d", result);  
+  return a;
 }
-int comp(int x, int y, int z)
+
+int compute(int x, int y, int z)
 {
   int r, p;
   r = x>y ? x:y ;
   p = r>z ? r:z ;
   return p;
+}
+
+int output(int r)
+{
+    printf("\n The greater number is: %d", r);
+}
+
+void main()
+{
+  int a,b,c,result;
+  a = input();
+  b = input();
+  c = input();
+  result = compute(a,b,c);
+  output(result);
 }
 
