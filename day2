@@ -1,0 +1,9 @@
+1. Write a program to get a number from the user and print it?
+#include<stdio.h>
+void main()
+{
+  int a;
+  printf("Enter a number: ");
+  scanf("%d",&a);
+  printf("You have entered: %d", a);
+}
