@@ -4,9 +4,111 @@ void main()
 {
   int a,b,sum;
   printf("Enter the 1st number: ");
-  scanf("%d \n",&a);
-  printf("Enter the 2nd Number: ");
-  scanf("%d \n",&b);
+  scanf("%d",&a);
+  printf("\n Enter the 2nd Number: ");
+  scanf("%d",&b);
   sum = a+b;
-  printf("The sum is: %d", sum);
+  printf("\n The sum is: %d", sum);
 }
+********************************************************************
+
+2. Write a function to add two integers.
+#include<stdio.h>
+int add(int, int);
+void main()
+{
+  int a,b,sum;
+  printf("Enter the 1st number: ");
+  scanf("%d",&a);
+  printf("\n Enter the 2nd Number: ");
+  scanf("%d \n",&b);
+  sum = add(a,b);
+  printf("\n The sum is: %d", sum);  
+}
+int add(int p, int q)
+{
+  int r;
+  r = p+q;
+  return r;
+}
+
+**********************************************************************
+3. Write a program to get two float from the user and print the sum of the two float?
+#include<stdio.h>
+void main()
+{
+  float a,b,sum;
+  printf("Enter the 1st number: ");
+  scanf("%f ",&a);
+  printf("Enter the 2nd Number: ");
+  scanf("%f \n",&b);
+  sum = a+b;
+  printf("The sum is: %f", sum);
+}
+********************************************************************
+
+4. Write a function to add two float
+#include<stdio.h>
+float add(float, float);
+void main()
+{
+  float a,b,sum;
+  printf("Enter the 1st number: ");
+  scanf("%f",&a);
+  printf("\n Enter the 2nd Number: ");
+  scanf("%f",&b);
+  sum = add(a,b);
+  printf("\n The sum is: %f", sum);  
+}
+float add(float p, float q)
+{
+  float r;
+  r = p+q;
+  return r;
+}
+
+**********************************************************
+5. Write a function to compare 2 numbers and test it.
+#include<stdio.h>
+int comp(int, int);
+void main()
+{
+  int a,b,result;
+  printf("Enter the 1st number: ");
+  scanf("%d",&a);
+  printf("\n Enter the 2nd Number: ");
+  scanf("%d \n",&b);
+  result = comp(a,b);
+  printf("\n The result is: %d", result);  
+}
+int comp(int x, int y)
+{
+  int r;
+  r = x>y ? x:y ;
+  return r;
+}
+
+*********************************************************
+6. Write a function to compare 3 numbers and test it.
+#include<stdio.h>
+int comp(int, int,int);
+void main()
+{
+  int a,b,c,result;
+  printf("Enter the 1st number: ");
+  scanf("%d",&a);
+  printf("\n Enter the 2nd Number: ");
+  scanf("%d",&b);
+  printf("\n Enter the 3nd Number: ");
+  scanf("%d",&c);
+  result = comp(a,b,c);
+  printf("\n The result is: %d", result);  
+}
+int comp(int x, int y, int z)
+{
+  int r, p;
+  r = x>y ? x:y ;
+  p = r>z ? r:z ;
+  return p;
+}
+
