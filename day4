@@ -14,3 +14,49 @@ void main()
   }
   printf("\n Sum: %d ",sum);
 }
+
+USING STRUCTURE:
+
+#include<stdio.h>
+struct mem
+{
+    int length;
+    int a[100];
+    int sum;
+}s;
+
+int input()
+{
+    struct s;
+    int i;
+    printf("Enter no of elements:");
+    scanf("%d",&s.length);
+    printf("\n Enter the elements:");
+    for(i=0;i<s.length;i++){
+        scanf("%d",&s.a[i]);
+    }
+}
+
+int compute(int length, int a[])
+{
+    struct s;
+    int i;
+    for(i=0;i<length;i++){
+        s.sum = s.sum + a[i];
+    } 
+}
+
+void output(int s)
+{
+    printf("The Sum is: %d", s);
+}
+
+void main()
+{
+    struct s;
+    int i, sum =0;
+    input();
+    sum = compute(s.length, s.a);
+    output(s.sum);
+    
+}
