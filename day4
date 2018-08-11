@@ -54,9 +54,9 @@ void output(int s)
 void main()
 {
     struct s;
-    int i, sum =0;
+    int i;
     input();
-    sum = compute(s.length, s.a);
+    compute(s.length, s.a);
     output(s.sum);
     
 }
