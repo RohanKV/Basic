@@ -129,3 +129,6 @@ void main()
     output(s.sum);
     
 }
+
+4. Write a program to find the smallest of n numbers.
+#include<stdio.h>
