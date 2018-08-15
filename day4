@@ -132,3 +132,41 @@ void main()
 
 4. Write a program to find the smallest of n numbers.
 #include<stdio.h>
+struct small
+{
+    int a[100];
+    int n;
+    int small;
+}s;
+
+void input()
+{
+    printf("Enter the number of numbers: ");
+    scanf("%d", &s.n);
+    printf("Enter the numbers: \n");
+    for(int i = 0; i < s.n; i++){
+        scanf("%d", &s.a[i]);
+    }
+}
+
+void compute(int n,int a[])
+{
+    s.small = a[0];
+    for(int i=0;i<s.n;i++){
+        if(s.a[i] < s.small)
+        {
+            s.small = s.a[i];
+        }
+    }
+}
+
+void output(int s)
+{
+    printf("Smallest is: %d", s);
+}
+void main()
+{
+    input();
+    compute(s.n,s.a);
+    output(s.small);
+}
