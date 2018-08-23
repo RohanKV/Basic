@@ -15,7 +15,7 @@ void main()
   printf("\n Sum: %d ",sum);
 }
 
-USING STRUCTURE:
+USING STRUCTURE GLOBAL VARIABLEs:
 
 #include<stdio.h>
 struct mem
@@ -28,11 +28,10 @@ struct mem
 int input()
 {
     struct s;
-    int i;
     printf("Enter no of elements:");
     scanf("%d",&s.length);
     printf("\n Enter the elements:");
-    for(i=0;i<s.length;i++){
+    for(int i=0;i<s.length;i++){
         scanf("%d",&s.a[i]);
     }
 }
@@ -40,8 +39,7 @@ int input()
 int compute(int length, int a[])
 {
     struct s;
-    int i;
-    for(i=0;i<length;i++){
+    for(int i=0;i<length;i++){
         s.sum = s.sum + a[i];
     } 
 }
@@ -59,27 +57,74 @@ void main()
     output(s.sum);  
 }
 
+USING STRUCTURE NOT AS GLOBAL VARIABLES:
+#include<stdio.h>
+struct mem
+{
+    int length;
+    int a[100];
+    int sum;
+};
+
+struct mem input()
+{
+    struct mem s;
+    printf("Enter no of elements:");
+    scanf("%d",&s.length);
+    printf("\n Enter the elements:");
+    for(int i=0;i<s.length;i++){
+        scanf("%d",&s.a[i]);
+    }
+    return s;
+}
+
+struct mem compute()
+{
+    struct mem s;
+    s.sum = 0;
+    for(int i = 0 ;  i < s.length ; i++){
+        s.sum = s.sum + s.a[i];
+    } 
+    return s;
+}
+
+struct mem output()
+{
+    struct mem s;
+    printf("The Sum is: %d", s.sum);
+}
+
+int main()
+{
+    struct mem s;
+    input();
+    compute();
+    output();
+    return 0;
+}
+
 
 2.Write function to get n numbers from the user.
-int input()
+struct mem input()
 {
-    int i, length, a[100];
+    struct mem s;
     printf("Enter no of elements:");
-    scanf("%d",&length);
+    scanf("%d",&s.length);
     printf("\n Enter the elements:");
-    for(i=0;i< length;i++){
-        scanf("%d",&a[i]);
+    for(int i=0;i< s.length;i++){
+        scanf("%d",&s.a[i]);
     }
 }
 
 3. Write function to compute the sum of n numbers.
-int compute(int length, int a[])
+struct mem compute()
 {
-    int i, sum = 0;
-    for(i=0;i<length;i++){
-        sum = sum + a[i];
-    }
-    return sum;
+    struct mem s;
+    s.sum = 0;
+    for(int i = 0 ;  i < s.length ; i++){
+        s.sum = s.sum + s.a[i];
+    } 
+    return s;
 }
 
 4. Write a program to find the sum of square roots of n numbers.
@@ -89,45 +134,44 @@ struct mem
 {
     int length;
     int a[100];
-    int sum;
-}s;
+    float sum;
+};
 
-int input()
+struct mem input()
 {
-    struct s;
-    int i;
+    struct mem s;
     printf("Enter no of elements:");
     scanf("%d",&s.length);
     printf("\n Enter the elements:");
-    for(i=0;i<s.length;i++){
+    for(int i=0;i<s.length;i++){
         scanf("%d",&s.a[i]);
     }
+    return s;
 }
 
-int compute(int length, int a[])
+struct mem compute()
 {
-    struct s;
-    int i;
-    for(i=0;i<length;i++){
-        a[i] = sqrt(a[i]);
+    struct mem s;
+    s.sum = 0;
+    for(int i = 0; i < s.length ; i++){
+        s.sum = s.sum + sqrt(s.a[i]);
     }
-    for(i=0;i<length;i++){
-        s.sum = s.sum + a[i];
-    } 
+    return s;
 }
 
-void output(int s)
+struct mem output()
 {
-    printf("The Sum is: %d", s);
+    struct mem s;
+    printf("The Sum is: %f", s.sum);
 }
 
-void main()
+int main()
 {
-    struct s;
+    struct mem s;
     input();
-    compute(s.length, s.a);
-    output(s.sum);
-    
+    compute();
+    output();
+    return 0;
 }
 
 4. Write a program to find the smallest of n numbers.
