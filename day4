@@ -214,3 +214,6 @@ void main()
     compute(s.n,s.a);
     output(s.small);
 }
+
+5. Write a program to find the smallest two numbers of n numbers.
+
