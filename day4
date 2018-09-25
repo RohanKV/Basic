@@ -174,17 +174,18 @@ int main()
     return 0;
 }
 
-4. Write a program to find the smallest of n numbers.
+5. Write a program to find the smallest of n numbers.
 #include<stdio.h>
 struct small
 {
     int a[100];
     int n;
     int small;
-}s;
+};
 
-void input()
+struct small input()
 {
+    struct small s;
     printf("Enter the number of numbers: ");
     scanf("%d", &s.n);
     printf("Enter the numbers: \n");
@@ -193,9 +194,10 @@ void input()
     }
 }
 
-void compute(int n,int a[])
+struct small compute()
 {
-    s.small = a[0];
+    struct small s;
+    s.small = s.a[0];
     for(int i=0;i<s.n;i++){
         if(s.a[i] < s.small)
         {
@@ -204,16 +206,72 @@ void compute(int n,int a[])
     }
 }
 
-void output(int s)
+struct small output()
 {
-    printf("Smallest is: %d", s);
-}
-void main()
-{
-    input();
-    compute(s.n,s.a);
-    output(s.small);
+    struct small s;
+    printf("Smallest is: %d", s.small);
 }
 
-5. Write a program to find the smallest two numbers of n numbers.
+void main()
+{
+    struct small s;
+    input();
+    compute();
+    output();
+    return 0;
+}
+
+6. Write a program to find the smallest two numbers of n numbers.
+#include<stdio.h>
+struct small
+{
+    int a[100];
+    int n;
+    int small;
+    int secsmall;
+};
+
+struct small input()
+{
+    struct small s;
+    printf("Enter the number of numbers: ");
+    scanf("%d", &s.n);
+    printf("Enter the numbers: \n");
+    for(int i = 0; i < s.n; i++){
+        scanf("%d", &s.a[i]);
+    }
+}
+
+struct small compute()
+{
+    struct small s;
+    s.small = s.secsmall = s.a[0];
+    for(int i=0;i<s.n;i++){
+        if(s.a[i] < s.small)
+        {
+            s.secsmall = s.small;
+            s.small = s.a[i];
+        }
+        else if(s.a[i] < s.secsmall && s.a[i] != s.small)
+        {
+            s.secsmall = s.a[i];
+        }
+    }
+}
+
+struct small output()
+{
+    struct small s;
+    printf("Smallest is: %d \n", s.small);
+    printf("Second Smallest is: %d",s.secsmall);
+}
+
+int main()
+{
+    struct small s;
+    input();
+    compute();
+    output();
+    return 0;
+}
 
